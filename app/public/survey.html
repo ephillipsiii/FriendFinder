@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder - Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href=css/style.css>
 </head>
 <body>
     <div class="container">
@@ -34,24 +35,176 @@
             </strong>
         </h3>
         <h4>
-            You have a deep apprectiate for the methodology of science
+            You have a deep apprectiation for the methodology of science.
         </h4>
-        <div class="btn-group">
-            <button type="button" class="btn btn-default">Select an Option</button>
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><option value></option></li>
-                <li><option value="1">1 (Strongly Disagree)</option></li>
-                <li><option value="2">2</option></li>
-                <li><option value="3">3</option></li>
-                <li><option value="4">4</option></li>
-                <li><option value="5">5 (Strongly Agree)</option></li>
-            </ul>
-        </div>        
+        <select class="select-choice" id="q1">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 2
+            </strong>
+        </h3>
+        <h4>
+            You subscribe to the thought that extraordinary claims require extraordinary evidence.
+        </h4>
+        <select class="select-choice" id="q2">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 3
+            </strong>
+        </h3>
+        <h4>
+            You have deeply held religious convictions.
+        </h4>
+        <select class="select-choice" id="q3">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 4
+            </strong>
+        </h3>
+        <h4>
+            You support separation of church and state.
+        </h4>
+        <select class="select-choice" id="q4">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 5
+            </strong>
+        </h3>
+        <h4>
+            You think that everyone's views should be respected regardless of whether they are supported by facts or not.
+        </h4>
+        <select class="select-choice" id="q5">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 6
+            </strong>
+        </h3>
+        <h4>
+            In a discussion, truth should be more important than people's sensitivities.
+        </h4>
+        <select class="select-choice" id="q6">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 7
+            </strong>
+        </h3>
+        <h4>
+            Current popular music and culture is the pinnacle of human creativity and culture.
+        </h4>
+        <select class="select-choice" id="q7">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 8
+            </strong>
+        </h3>
+        <h4>
+            Being in a society with others requires some level of compromise and willingness to sacrifice for the wellbeing of others and society as a whole.
+        </h4>
+        <select class="select-choice" id="q8">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 9
+            </strong>
+        </h3>
+        <h4>
+            The autonomy of the individual in society is paramount - one should never have to bow to the whims, desires, or needs of others if one choses not to.
+        </h4>
+        <select class="select-choice" id="q9">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h3>
+            <strong>
+                Question 10
+            </strong>
+        </h3>
+        <h4>
+            The environment and nature are to be dominated by humans to do with as they please.
+        </h4>
+        <select class="select-choice" id="q10">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
     </div>
+    <br><br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Submit
+    </button>
+    <hr>
+    <div class="footer">
+        <div class="container">
+            <p>
+                <a href=/api/friends>API Friends List</a>
+                 | 
+                <a href="#">Git Hub Repo</a>
+            </p>
+        </div>
+    </div> 
     
 </body>
 </html>

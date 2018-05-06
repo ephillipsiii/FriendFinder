@@ -5,6 +5,8 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chosen-js": "^1.8.5",
+    "chosen-npm": "^1.4.2",
     "express": "^4.16.3",
     "path": "^0.12.7"
   },
