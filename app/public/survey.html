@@ -225,10 +225,9 @@
                         $("#q10").val().trim(),
                     ]
                 };
-                console.log('userInput = ' + JSON.stringify(userInput))
-            $.post('/api/friends', userInput)
-        .done(function(data){
-            console.log('response = ' + JSON.stringify.data);
+                // console.log('userInput = ' + JSON.stringify(userInput))
+            $.post('/api/friends', userInput, function(data){
+            // console.log('response = ' + JSON.stringify.data);
         })
             })
         })
