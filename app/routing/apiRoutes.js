@@ -12,7 +12,25 @@ module.exports = function(app) {
 	app.post('/api/friends', function(req, res){
 		var userInput = req.body;
 		var userResponse = userInput.choices;
+		var matchName = '';
+		var matchPic = '';
+		var totalDifference = 10000;
+
+		for (var i = 0; i < friends.length; i++){
+			var difference = 0;
+			for (var j = 0; j < userResponse.length; j++){
+				difference += Math.abs(friends[i].answers[j] - userResponse[j]);
+			}
+
+			if (difference < totalDifference){
+				totalDifference = difference;
+				matchName = friends[i].name;
+				matchPic = friends[i].photo;
+				
+			}
+		}
 		friends.push(userInput);
+		res.json({status: 'OK', matchName: matchName, matchPic: matchPic});
 	});
 	};
 
