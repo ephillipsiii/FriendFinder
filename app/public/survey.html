@@ -246,7 +246,7 @@
             $.post('/api/friends', userInput, function(data){
                 $('#userMatch').html(data.matchName);
                 $('#userMatchPic').attr('src', data.matchPic);
-                $('#modal1').modal('open');
+                $('.modal').modal('open');
             })
             })
         })
