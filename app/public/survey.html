@@ -202,11 +202,11 @@
             <p>
                 <a href="./api/friends">API Friends List</a>
                  | 
-                <a href="#">Git Hub Repo</a>
+                <a href="https://github.com/ephillipsiii/FriendFinder">Git Hub Repo</a>
             </p>
         </div>
     </div> 
-    <div id="modal1" class="modal">
+    <div id="resultsModal" class="modal">
         <div class="modal-content">
             <h3>
                 Your Closest Friend Match!
@@ -214,6 +214,11 @@
             <div class="divider"></div>
             <h4 id="userMatch"></h4>
             <img id="userMatchPic" width="600px" src="">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Take again!</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
         </div>
 
     </div>
@@ -238,7 +243,7 @@
                     ]
                 };
 
-            $('.modal').modal({
+            $('#resultsModal').modal({
                 dismissable: false,
                 opacity: 1,
             });
@@ -246,7 +251,7 @@
             $.post('/api/friends', userInput, function(data){
                 $('#userMatch').html(data.matchName);
                 $('#userMatchPic').attr('src', data.matchPic);
-                $('.modal').modal('open');
+                $('#resultsModal').modal('open');
             })
             })
         })
