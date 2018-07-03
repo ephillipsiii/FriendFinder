@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder - Survey</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
     <link rel="stylesheet" href=css/style.css>
 </head>
+
 <body>
     <div class="container">
         <h2>Survey Questions</h2>
@@ -27,7 +32,7 @@
         <input type="text" id="name" class="form-control" required>
         <h4>
             Link to a Photo Image (Required)
-        <input type="text" id="pic" class="form-control" required>
+            <input type="text" id="pic" class="form-control" required>
         </h4>
         <hr>
         <h3>
@@ -148,7 +153,8 @@
             </strong>
         </h3>
         <h4>
-            Being in a society with others requires some level of compromise and willingness to sacrifice for the wellbeing of others and society as a whole.
+            Being in a society with others requires some level of compromise and willingness to sacrifice for the wellbeing of others
+            and society as a whole.
         </h4>
         <select class="select-choice" id="q8">
             <option value></option>
@@ -164,7 +170,8 @@
             </strong>
         </h3>
         <h4>
-            The autonomy of the individual in society is paramount - one should never have to bow to the whims, desires, or needs of others if one choses not to.
+            The autonomy of the individual in society is paramount - one should never have to bow to the whims, desires, or needs of
+            others if one choses not to.
         </h4>
         <select class="select-choice" id="q9">
             <option value></option>
@@ -191,7 +198,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
     </div>
-    <br><br>
+    <br>
+    <br>
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
         <i class="fa fa-check-circle" aria-hidden="true"></i>
         Submit
@@ -201,11 +209,11 @@
         <div class="container">
             <p>
                 <a href="./api/friends">API Friends List</a>
-                 | 
+                |
                 <a href="https://github.com/ephillipsiii/FriendFinder">Git Hub Repo</a>
             </p>
         </div>
-    </div> 
+    </div>
     <div id="resultsModal" class="modal">
         <div class="modal-content">
             <h3>
@@ -215,7 +223,7 @@
             <h4 id="userMatch"></h4>
             <img id="userMatchPic" width="600px" src="">
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" href="/survey.html">Take again!</button>
+                <a href="/survey" button type="button" class="btn btn-primary" id="takeAgain">Take again!</button></a>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
             </div>
@@ -223,8 +231,8 @@
 
     </div>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $("#submit").on("click", function(event) {
+        $(document).ready(function () {
+            $("#submit").on("click", function (event) {
                 event.preventDefault();
                 var userInput = {
                     name: $("#name").val().trim(),
@@ -243,18 +251,24 @@
                     ]
                 };
 
-            $('#resultsModal').modal({
-                dismissable: false,
-                opacity: 1,
-            });
-                
-            $.post('/api/friends', userInput, function(data){
-                $('#userMatch').html(data.matchName);
-                $('#userMatchPic').attr('src', data.matchPic);
-                $('#resultsModal').modal('open');
+                $('#resultsModal').modal({
+                    dismissable: false,
+                    opacity: 1,
+                });
+
+                $.post('/api/friends', userInput, function (data) {
+                    $('#userMatch').html(data.matchName);
+                    $('#userMatchPic').attr('src', data.matchPic);
+                    $('#resultsModal').modal('open');
+                })
             })
-            })
+            // $("#takeAgain").on("click", function (event) {
+            //     event.preventDefault();
+            //     $('.form-control').reset();
+            //     $('#select-choice').reset();
+            //     })
         })
     </script>
 </body>
+
 </html>
