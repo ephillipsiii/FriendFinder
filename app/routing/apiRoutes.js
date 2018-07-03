@@ -11,7 +11,7 @@ module.exports = function(app) {
 
 	app.post('/api/friends', function(req, res){
 		var userInput = req.body;
-		var userResponse = userInput.choices;
+		var userResponse = userInput.answers;
 		var matchName = '';
 		var matchPic = '';
 		var totalDifference = 10000;
