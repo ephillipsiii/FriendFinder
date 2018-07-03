@@ -5,3 +5,12 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
+#resultsModal {
+    width: 50%
+}
+
+#userMatchPic {
+    max-width: 200px;
+    max-height: 200px;
+}
