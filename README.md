@@ -5,7 +5,7 @@ By answering a few survey questions, the user will be matched with a friend with
 
 Friend Finder was created with the use Node.js and Express on the back end and the Bootstrap framework for the front end.  Feel free to give the application a try [here](https://protected-fortress-16688.herokuapp.com/).
 
-##Installation and running locally
+## Installation and running locally
 To install the app and run it locally, complete the following steps in the command line
   1. git clone git@github.com:ephillipsiii/FriendFinder.git
   2. cd FriendFinder
